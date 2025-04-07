@@ -1,0 +1,62 @@
+[0m07:14:38.276669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075b5be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10845bc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10845bed0>]}
+
+
+============================== 07:14:38.279651 | 35162427-3a4c-4bdf-851a-a5abd79fc948 ==============================
+[0m07:14:38.279651 [info ] [MainThread]: Running with dbt=1.9.3
+[0m07:14:38.280003 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/joseformiga/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m07:15:19.225749 [debug] [MainThread]: Starter project path: /Users/joseformiga/Documents/projects/airbnb_bigquery_dbt/venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m07:15:19.236675 [info ] [MainThread]: 
+Your new dbt project "airbnb_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:15:19.237136 [info ] [MainThread]: Setting up your profile.
+[0m07:31:17.834448 [info ] [MainThread]: Profile airbnb_project written to /Users/joseformiga/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m07:31:17.878012 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 999.63416, "process_in_blocks": "0", "process_kernel_time": 0.37403, "process_mem_max_rss": "185417728", "process_out_blocks": "0", "process_user_time": 1.03151}
+[0m07:31:17.879191 [debug] [MainThread]: Command `dbt init` succeeded at 07:31:17.878990 after 999.64 seconds
+[0m07:31:17.880552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e921cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083020f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e9e4490>]}
+[0m07:31:17.881149 [debug] [MainThread]: Flushing usage events
+[0m07:31:18.429979 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:45:49.711375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c7dbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ff3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ff3ed0>]}
+
+
+============================== 07:45:49.715629 | fa6b56fb-6fa5-46ee-87f0-29f9c2d54064 ==============================
+[0m07:45:49.715629 [info ] [MainThread]: Running with dbt=1.9.3
+[0m07:45:49.716009 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/joseformiga/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:45:49.716588 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/joseformiga/Documents/projects/airbnb_bigquery_dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:45:49.718276 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.050736915, "process_in_blocks": "0", "process_kernel_time": 0.158116, "process_mem_max_rss": "97730560", "process_out_blocks": "0", "process_user_time": 0.681687}
+[0m07:45:49.718667 [debug] [MainThread]: Command `dbt run` failed at 07:45:49.718602 after 0.05 seconds
+[0m07:45:49.718893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a129a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d9b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d5ff00>]}
+[0m07:45:49.719098 [debug] [MainThread]: Flushing usage events
+[0m07:45:50.242437 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:23:40.743121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d39be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111af3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111af3ed0>]}
+
+
+============================== 16:23:40.745733 | 0ae9da94-043d-43f3-a9a6-5a4d377919a1 ==============================
+[0m16:23:40.745733 [info ] [MainThread]: Running with dbt=1.9.3
+[0m16:23:40.746054 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/joseformiga/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:23:40.746331 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/joseformiga/Documents/projects/airbnb_bigquery_dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:23:40.747651 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.039710917, "process_in_blocks": "0", "process_kernel_time": 0.092808, "process_mem_max_rss": "98091008", "process_out_blocks": "0", "process_user_time": 0.611306}
+[0m16:23:40.747872 [debug] [MainThread]: Command `dbt run` failed at 16:23:40.747822 after 0.04 seconds
+[0m16:23:40.748042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111b29a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11199b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11195bf00>]}
+[0m16:23:40.748213 [debug] [MainThread]: Flushing usage events
+[0m16:23:41.267851 [debug] [MainThread]: An error was encountered while trying to flush usage events

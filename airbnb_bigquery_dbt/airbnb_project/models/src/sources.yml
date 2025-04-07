@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: airbnb_raw
+    description: "Raw data from Airbnb"
+    schema: airbnb_raw
+
+    tables:
+      - name: listings_raw
+        description: "Source data for Airbnb listings"
+        columns:
+          - name: room_type
+            tests:
+              - dbt_expectations.expect_column_distinct_count_to_equal:
+                  value: 4
+
+
+      - name: reviews_raw
+        description: "Source data for Airbnb reviews"
+        loaded_at_field: date
+        freshness:
+          warn_after: {count: 1, period: hour}
+          error_after: {count: 24, period: hour}
+
+      - name: hosts_raw
+        description: "Source data for Airbnb hosts"
+        
