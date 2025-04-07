@@ -10,3 +10,6 @@ env/
 
 # Ignore VSCode configuration folder
 .vscode/
+
+# Ignore dbt logs
+logs/
