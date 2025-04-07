@@ -7,3 +7,6 @@ env/
 
 # Ignore compiled Python files
 *.pyc
+
+# Ignore VSCode configuration folder
+.vscode/
