@@ -2,4 +2,6 @@
 target/
 dbt_packages/
 logs/
+
+# Ignore macOS system files
 .DS_Store
