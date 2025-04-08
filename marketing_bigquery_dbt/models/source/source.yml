@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: instagram
+  - name: marketing
     database: data-engineering-411419   # replace with your actual GCP project ID
     schema: marketing                # your BigQuery dataset
     tables:
