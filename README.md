@@ -11,7 +11,7 @@ Each folder/file is organized based on the project or DBT model it relates to.
 These DBT projects focus on transforming and modeling data, helping me better analyze datasets and generate insights. I use DBT as a tool to automate and streamline ETL workflows, while adhering to best practices in the data engineering process.
 
 **-- Projects --**\
-1 - AIRBNB + BigQuery + dbt
+1 - AIRBNB + BigQuery + dbt\
 2 - Marketing (instragram) + Bigquery + dbt
 
 Check out my blog and learn more about my work: [https://joseformiga.wixsite.com/datablog/blog]
