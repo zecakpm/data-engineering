@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: instagram
+    database: data-engineering-411419   # replace with your actual GCP project ID
+    schema: marketing                # your BigQuery dataset
+    tables:
+      - name: users
+        description: "Raw user profile data from Instagram export"
+      - name: posts
+        description: "Raw Instagram posts with metadata"
+      - name: comments
+        description: "Raw comments on Instagram posts"
