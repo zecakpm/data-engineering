@@ -34,3 +34,8 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+      dim:
+        +materialized: table
+      src:
+      # every model will created as cte to be used on the following model
+        +materialized: ephemeral
