@@ -7,6 +7,7 @@ SELECT
     p.media_type,
     p.likes_count,
     p.comments_count,
+    COUNT(DISTINCT u.user_id) AS total_users,
     COUNT(c.comment_id) AS total_comments,
     p.post_created_at,
     DATE(p.post_created_at) AS post_date
