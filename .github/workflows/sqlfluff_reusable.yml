@@ -1,15 +1,11 @@
-name: SQLFluff Lint
+name: Reusable SQLFluff Lint
 
 on:
-  pull_request:
-    paths:
-      - 'models/**/*.sql'
-      - '.sqlfluff'
-      - 'requirements.txt'
-  push:
-    branches:
-      - main
-      - develop
+  workflow_call:
+    inputs:
+      project_path:
+        required: true
+        type: string
 
 jobs:
   lint-sql:
@@ -27,8 +23,8 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r ${{ inputs.project_path }}/requirements.txt
 
       - name: 🔍 Lint SQL files with SQLFluff
         run: |
-          sqlfluff lint models/
+          sqlfluff lint ${{ inputs.project_path }}/models/
