@@ -4,7 +4,7 @@ SELECT
   user.username,
   user.full_name,
   user.is_verified,
-  fpo.media_type_id,
+  fpo.media_type,
   fpo.likes_count,
   fpo.comments_count,
   COUNT(DISTINCT user.user_id) AS total_users,
