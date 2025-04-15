@@ -78,3 +78,5 @@ typing_extensions==4.13.1
 tzdata==2025.2
 urllib3==2.3.0
 zipp==3.21.0
+sqlfluff>=2.3.2
+sqlfluff-templater-dbt>=2.3.2
