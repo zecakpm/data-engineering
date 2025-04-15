@@ -1,0 +1,18 @@
+name: SQLFluff - Marketing Project
+
+on:
+  pull_request:
+    paths:
+      - 'marketing_bigquery_dbt/models/**/*.sql'
+      - 'marketing_bigquery_dbt/.sqlfluff'
+      - 'marketing_bigquery_dbt/requirements.txt'
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  call-linter:
+    uses: ./.github/workflows/sqlfluff_reusable.yml
+    with:
+      project_path: marketing_bigquery_dbt
