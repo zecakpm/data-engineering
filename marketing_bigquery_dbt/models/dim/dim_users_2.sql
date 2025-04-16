@@ -1,3 +1,4 @@
+{# test user #}
 SELECT
   user_id,
   username,
