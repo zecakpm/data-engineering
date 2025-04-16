@@ -1,14 +1,12 @@
 [sqlfluff]
 templater = dbt
 dialect = bigquery
-
 exclude_rules = RF02, AL01, ST07, ST06, LT14
-
 max_line_length = 200
 large_file_skip_byte_limit = 30000
 
 [sqlfluff:templater:dbt]
-project_dir = ./
+project_dir = .
 
 [sqlfluff:indentation]
 tab_space_size = 2
@@ -37,5 +35,4 @@ extended_capitalisation_policy = upper
 min_alias_length = 3
 
 [sqlfluff:rules:references.keywords]
-
 ignore_words = week, month, quarter, date

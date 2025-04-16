@@ -25,6 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ${{ inputs.project_path }}/requirements.txt
 
-      - name: 🔍 Lint SQL files with SQLFluff
+      - name: 🔍 Lint SQL files with SQLFluff (from project dir)
+        working-directory: ${{ inputs.project_path }}
         run: |
-          sqlfluff lint ${{ inputs.project_path }}/models/
+          sqlfluff lint models/
