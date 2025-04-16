@@ -6,6 +6,9 @@ on:
       project_path:
         required: true
         type: string
+      dbt_profile_name:
+        required: true
+        type: string
 
 jobs:
   lint-sql:
@@ -25,7 +28,7 @@ jobs:
           mkdir -p ~/.dbt
           echo "${{ secrets.GCP_KEYFILE_JSON }}" > /tmp/keyfile.json
           cat > ~/.dbt/profiles.yml <<EOL
-${{ inputs.project_path }}:
+${{ inputs.dbt_profile_name }}:
   target: dev
   outputs:
     dev:
