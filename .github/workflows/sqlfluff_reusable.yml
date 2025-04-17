@@ -27,21 +27,20 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           echo "${{ secrets.GCP_KEYFILE_JSON }}" > /tmp/keyfile.json
-          cat > ~/.dbt/profiles.yml <<EOL
+          cat <<EOL > ~/.dbt/profiles.yml
 ${{ inputs.dbt_profile_name }}:
   target: dev
   outputs:
     dev:
       type: bigquery
       method: service-account
-      project: ${{ secrets.GCP_PROJECT_ID }}
-      dataset: ${{ secrets.GCP_DATASET }}
+      project: "${{ secrets.GCP_PROJECT_ID }}"
+      dataset: "${{ secrets.GCP_DATASET }}"
       keyfile: /tmp/keyfile.json
       threads: 4
       timeout_seconds: 300
       location: europe-north1
 EOL
-
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
