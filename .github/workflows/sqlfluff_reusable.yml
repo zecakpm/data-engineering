@@ -36,6 +36,7 @@ jobs:
           echo "      method: service-account" >> ~/.dbt/profiles.yml
           echo "      project: \"${{ secrets.GCP_PROJECT_ID }}\"" >> ~/.dbt/profiles.yml
           echo "      dataset: \"${{ secrets.GCP_DATASET }}\"" >> ~/.dbt/profiles.yml
+          echo "      schema: \"${{ secrets.GCP_DATASET }}\"" >> ~/.dbt/profiles.yml
           echo "      keyfile: /tmp/keyfile.json" >> ~/.dbt/profiles.yml
           echo "      threads: 4" >> ~/.dbt/profiles.yml
           echo "      timeout_seconds: 300" >> ~/.dbt/profiles.yml
