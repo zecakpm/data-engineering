@@ -1,6 +1,6 @@
-{# adding comments for testing #}
 SELECT
   user_id,
+  user_id AS user_id_duplicate,
   username,
   full_name,
   is_verified,
