@@ -41,6 +41,7 @@ ${{ inputs.dbt_profile_name }}:
       timeout_seconds: 300
       location: europe-north1
 EOL
+
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
