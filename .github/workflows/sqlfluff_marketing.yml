@@ -16,3 +16,4 @@ jobs:
     uses: ./.github/workflows/sqlfluff_reusable.yml
     with:
       project_path: marketing_bigquery_dbt
+      dbt_profile_name: marketing_bigquery_dbt
