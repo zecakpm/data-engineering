@@ -1,3 +1,4 @@
+{# adding comments for testing #}
 SELECT
   user_id,
   username,
